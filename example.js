@@ -1,4 +1,5 @@
-function createHomepageOSMinit(_latitude,_longitude,_nbField, _refresh){
+
+function createHomepageOSMinit(_latitude,_longitude,_nbField){
 	setMapHeight();   
     if( document.getElementById('map') != null ){
 
