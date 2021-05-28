@@ -48,9 +48,9 @@ function createHomepageOSMinit(_latitude,_longitude,_nbField){
                 allMarkers.push(L.latLng(data.properties[i]['la'], data.properties[i]['lo']));
 
 
- 
-                //data.properties[i]['b2'] = 0;
 
+		
+		    /* SHOW IMAGE DEPENDING OF SENSOR VALUES */
                 if((data.properties[i]['b1']>=data.properties[i]['se'] && data.properties[i]['b1'] < data.properties[i]['se']+1) ||
                     (data.properties[i]['b2']>=data.properties[i]['se'] && data.properties[i]['b2'] < data.properties[i]['se']+1) ||
                     (data.properties[i]['b3']>=data.properties[i]['se'] && data.properties[i]['b3'] < data.properties[i]['se']+1) ||
@@ -78,7 +78,7 @@ function createHomepageOSMinit(_latitude,_longitude,_nbField){
 
 
                     
-
+		/* POSITION OF THE ICONE */
                 var _icon = L.divIcon({
                     //html: '<img src="' + locations[i][7] +'">',
                     html: nhtml,
@@ -93,6 +93,7 @@ function createHomepageOSMinit(_latitude,_longitude,_nbField){
                     icon: _icon
                 });
 
+		/* PREPARE THE MARKER */
                 var str ='';
                 if(data.properties[i]['b4'] != null)
                 {
